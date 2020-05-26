@@ -2,23 +2,23 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
+        "name": {
+            "value": "name"
+        },
         "location": {
             "value": "westeurope"
-        },
-        "name": {
-            "value": "MyLoadBalancer"
         },
         "sku": {
             "value": "Standard"
         },
         "publicIPAddressName": {
-            "value": "LB-PIP"
+            "value": "LBPIP-VSCODE"
         },
-        "IpZone": {
+        "ipZone": {
             "value": "3"
         },
-        "ResourceGroup": {
-            "value": "NewResourceGroup"
+        "resourceGroup": {
+            "value": "Flow1"
         }
     }
 }
