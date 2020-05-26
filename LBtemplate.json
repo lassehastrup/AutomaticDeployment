@@ -3,37 +3,37 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "name": {
-            "type": "string"
+            "type": "String"
         },
         "location": {
-            "type": "string"
+            "type": "String"
         },
         "sku": {
-            "type": "string"
+            "type": "String"
         },
         "publicIPAddressName": {
-            "type": "string"
+            "type": "String"
         },
         "IpZone": {
-            "type": "string"
+            "type": "String"
         },
         "ResourceGroup": {
-            "type": "string"
+            "type": "String"
         }
     },
     "resources": [
         {
+            "type": "Microsoft.Network/loadBalancers",
             "apiVersion": "2019-06-01",
             "name": "[parameters('name')]",
-            "type": "Microsoft.Network/loadBalancers",
             "location": "[parameters('location')]",
-            "sku": {
-                "name": "[parameters('sku')]"
-            },
             "dependsOn": [
                 "[concat('Microsoft.Network/publicIPAddresses/', parameters('publicIPAddressName'))]"
             ],
             "tags": {},
+            "sku": {
+                "name": "[parameters('sku')]"
+            },
             "properties": {
                 "frontendIPConfigurations": [
                     {
@@ -48,17 +48,17 @@
             }
         },
         {
-            "apiVersion": "2019-02-01",
-            "zones": [
-                "[parameters('IpZone')]"
-            ],
             "type": "Microsoft.Network/publicIPAddresses",
+            "apiVersion": "2019-02-01",
             "name": "[parameters('publicIPAddressName')]",
             "location": "[parameters('location')]",
+            "tags": {},
             "sku": {
                 "name": "[parameters('sku')]"
             },
-            "tags": {},
+            "zones": [
+                "[parameters('IpZone')]"
+            ],
             "properties": {
                 "publicIPAllocationMethod": "Static",
                 "publicIPAddressVersion": "IPv4",
