@@ -16,6 +16,9 @@
         },
         "IpZone": {
             "type": "string"
+        },
+        "ResourceGroup": {
+            "type": "string"
         }
     },
     "resources": [
@@ -37,7 +40,7 @@
                         "name": "LoadBalancerFrontEnd",
                         "properties": {
                             "publicIPAddress": {
-                                "id": "[resourceId('John', 'Microsoft.Network/publicIPAddresses', parameters('publicIPAddressName'))]"
+                                "id": "[resourceId(parameters('ResourceGroup'), 'Microsoft.Network/publicIPAddresses', parameters('publicIPAddressName'))]"
                             }
                         }
                     }
