@@ -16,6 +16,9 @@
         },
         "IpZone": {
             "value": "3"
+        },
+        "ResourceGroup": {
+            "value": "NewResourceGroup"
         }
     }
 }
