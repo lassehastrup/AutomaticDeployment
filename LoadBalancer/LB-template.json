@@ -42,7 +42,6 @@
         "virtualNetworkName": "LB-VNET1",
         "subnetName": "LB-Subnet1",
         "loadBalancerName": "LB-01",
-        "nicName": "networkInterface1",
         "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]"
     },
     "resources": [
@@ -62,33 +61,6 @@
                         "name": "[variables('subnetName')]",
                         "properties": {
                             "addressPrefix": "[parameters('subnetPrefix')]"
-                        }
-                    }
-                ]
-            }
-        },
-        {
-            "type": "Microsoft.Network/networkInterfaces",
-            "apiVersion": "2015-06-15",
-            "name": "[variables('nicName')]",
-            "location": "[parameters('location')]",
-            "dependsOn": [
-                "[concat('Microsoft.Network/loadBalancers/', variables('loadBalancerName'))]"
-            ],
-            "properties": {
-                "ipConfigurations": [
-                    {
-                        "name": "LB-IPConfig",
-                        "properties": {
-                            "privateIPAllocationMethod": "Dynamic",
-                            "subnet": {
-                                "id": "[variables('subnetRef')]"
-                            },
-                            "loadBalancerBackendAddressPools": [
-                                {
-                                    "id": "[concat(resourceId('Microsoft.Network/loadBalancers', variables('loadBalancerName')),'/backendAddressPools/loadBalancerBackEnd')]"
-                                }
-                            ]
                         }
                     }
                 ]
