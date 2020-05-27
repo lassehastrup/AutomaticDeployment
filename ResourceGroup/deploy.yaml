@@ -19,7 +19,7 @@ steps:
     subscriptionId: 'd6f9e502-800e-4deb-ac9d-ec29121bbb7b'
     location: 'West Europe'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/lassehastrup/AutomaticDeployment/master/NewResourceGroup.json'
+    csmFileLink: 'https://raw.githubusercontent.com/lassehastrup/AutomaticDeployment/master/ResourceGroup/template.json'
     overrideParameters: '-rgName $(rgName) -rgLocation $(rgLocation)'
     deploymentMode: 'Incremental'
     deploymentName: 'ResourceGroupDeployment'
