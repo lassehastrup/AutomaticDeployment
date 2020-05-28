@@ -5,6 +5,9 @@
         "location": {
             "type": "string"
         },
+        "ResourceGroup": {
+            "type": "string"
+        },
         "networkSecurityGroupName": {
             "type": "string"
         },
