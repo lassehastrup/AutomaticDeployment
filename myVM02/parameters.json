@@ -5,6 +5,9 @@
         "location": {
             "value": "westeurope"
         },
+        "Resourcegroup": {
+            "value": "AutomaticDeployment"
+        },
         "networkSecurityGroupName": {
             "value": "myVM02-nsg"
         },
