@@ -5,7 +5,7 @@
         "location": {
             "value": "westeurope"
         },
-        "Resourcegroup": {
+        "ResourceGroup": {
             "value": "AutomaticDeployment"
         },
         "networkSecurityGroupName": {
