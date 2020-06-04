@@ -93,7 +93,7 @@
         },
         "modulesUrl" : {
             
-            "value": "https://iisdscstorageaccount.blob.core.windows.net/windows-powershell-dsc/DSCconf.ps1.zip"
+            "value": "https://iisdscstorageaccount.blob.core.windows.net/windows-powershell-dsc/DSCconf_2.ps1.zip"
         
         },
         "configurationFunction": {
