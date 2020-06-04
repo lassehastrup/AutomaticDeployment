@@ -14,25 +14,6 @@
         "networkSecurityGroupRules": {
             "value": [
                 {
-                    "name": "default-allow-rdp",
-                    "properties": {
-                        "priority": 1000,
-                        "protocol": "TCP",
-                        "access": "Allow",
-                        "direction": "Inbound",
-                        "sourceApplicationSecurityGroups": [],
-                        "destinationApplicationSecurityGroups": [],
-                        "sourceAddressPrefix": "*",
-                        "sourcePortRange": "*",
-                        "destinationAddressPrefix": "*",
-                        "destinationPortRange": "3389"
-                    }
-                }
-            ]
-        },
-        "networkSecurityGroupRules": {
-            "value": [
-                {
                     "name": "HTTP-Allow",
                     "properties": {
                         "priority": 100,
