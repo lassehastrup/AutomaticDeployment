@@ -65,7 +65,7 @@
     },
     "variables": {
         "nsgId": "[resourceId(resourceGroup().name, 'Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroupName'))]",
-        "networkInterfaceName": "networkInterface2",
+        "networkInterfaceName": "networkInterface1",
         "backendPoolId": "[concat(resourceGroup().id, '/providers/Microsoft.Network/loadBalancers/LB-01/backendAddressPools/loadBalancerBackEnd')]",
         "subnetRef": "[concat(resourceGroup().id, '/providers/Microsoft.Network/virtualNetworks/LB-VNET1/subnets/LB-Subnet1')]",
         "location": "[resourcegroup().location]",
